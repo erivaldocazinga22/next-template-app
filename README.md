@@ -32,8 +32,8 @@ Este template já vem pré-configurado com as seguintes ferramentas:
 
 1. ✅ **Testes unitários com [`Vitest`](https://vitest.dev/guide/)**
 2. 🧹 **Linting com [`Biome`](https://biomejs.dev/guides/getting-started/)**
-3. 🔐 **Hooks de pré-commit com [`Husky`](https://typicode.github.io/husky)**
-   * Validação de mensagens de commit com [`Commitlint`](https://commitlint.js.org/)
+3. 🔐 **Hooks de pré-commit com [`Husky`](htts://typicode.github.io/husky)**
+   * Validação de mensagens de commit com [`Commitlint`](https://commitlit.js.org/)
    * Seguindo o padrão [`Conventional Commits`](https://www.conventionalcommits.org/)
 4. ⚙️ **CI/CD pré-configurado com GitHub Actions**
 5. 🔒 **Rotas privadas usando Middleware do Next.js**
