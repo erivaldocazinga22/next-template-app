@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Clonar o repositório
+        uses: actions/checkout@v3
+
+      - name: Usar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Instalar pnpm
+        run: npm install -g pnpm
+
+      # Cache de dependências do pnpm
+      - name: Cache do pnpm
+        uses: actions/cache@v3
+        with:
+          path: ~/.next/cache
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Build da aplicação
+        env:
+          NEXT_BASEURL: http://localhost:5500
+        run: pnpm run build
