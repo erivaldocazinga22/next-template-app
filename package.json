@@ -1,5 +1,5 @@
 {
-	"name": "billing-system-dashboard",
+	"name": "@billing-system/dashboard",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
