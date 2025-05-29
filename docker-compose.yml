@@ -5,12 +5,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: billing-system-dashboard-app
+    container_name: next-template-app
     ports:
       - "3000:3000"
     environment:
       NODE_ENV: production
-      NEXT_BASEURL: ${NEXT_BASEURL}
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+      NEXT_API_URL: ${NEXT_API_URL}
     env_file:
       - .env
     restart: unless-stopped

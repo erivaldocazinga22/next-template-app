@@ -1,4 +1,4 @@
-# Billing System Dashbaord
+# Next Template App
 
 Este é um template base para aplicações Next.js com diversas ferramentas já configuradas.
 
@@ -23,7 +23,8 @@ git push -u origin main
 Após clonares o projeto, cria um ficheiro `.env` na raiz e adiciona:
 
 ```env
-NEXT_BASEURL=http://localhost:5500 # Aqui vai a URL da tua API
+NEXT_PUBLIC_API_URL=http://localhost:5500 # Aqui vai a URL da tua API para acesso publico no next
+NEXT_API_URL=http://localhost:5500 # Aqui vai a URL da tua API
 ```
 
 ## ⚙️ Configurações incluídas
@@ -76,4 +77,4 @@ http://localhost:3000
 docker compose down
 ```
 
-> ℹ️ A variável de ambiente `NEXT_BASEURL` (definida no `.env`) deve apontar para a tua API — ajusta se necessário antes de buildar.
+> ℹ️ As variáveis de ambiente `NEXT_PUBLIC_API_URL` e `NEXT_API_URL` (definida no `.env`) devem apontar para a tua API — ajusta se necessário antes de buildar.
