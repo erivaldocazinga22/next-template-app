@@ -19,6 +19,7 @@ import "@testing-library/jest-dom/vitest";
 // Isso evita warnings relacionados ao act(...) em atualizações do React
 // e garante que matchers como `.toBeInTheDocument()` funcionem corretamente
 import * as matchers from "@testing-library/jest-dom/matchers";
+import { afterEach, expect, vi } from "vitest";
 
 // Estende o expect global com os matchers do jest-dom
 // Sem isso, pode aparecer warning do tipo "You might have forgotten to wrap an update in act(...)"
